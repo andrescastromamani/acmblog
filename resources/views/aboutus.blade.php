@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-
 @section('section')
-    <h1>Servicios</h1>
+    <h1>Mi equipo</h1>
+    @foreach($)
 @endsection

@@ -15,11 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome')  ;
-});
+})->name('welcome');
 
 Route::get('contact', function (){
    return view('contact') ;
-})->name('contactos');
+})->name('contact');
+
+Route::get('services', function (){
+    return view('services') ;
+})->name('services');
+
+Route::get('aboutus', function (){
+    $team = ['Fidel','Jose','Ariel', 'Rimer'];
+    //return view('aboutus',['team'=>$team]);
+    return view('aboutus',compact('team'));
+})->name('aboutus');
 
 Auth::routes();
 

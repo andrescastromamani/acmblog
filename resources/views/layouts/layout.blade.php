@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="{{route('welcome')}}">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,16 +31,16 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="#">Services</a>
+                    <a class="nav-link " aria-current="page" href="{{route('services')}}">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About US</a>
+                    <a class="nav-link" href="{{route('aboutus')}}">About US</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('contactos')}}">Contact US</a>
+                    <a class="nav-link" href="{{route('contact')}}">Contact US</a>
                 </li>
             </ul>
         </div>
