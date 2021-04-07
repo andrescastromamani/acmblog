@@ -200,8 +200,8 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="usuarios"
-                                    class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
+                                <a href="{{route('users')}}"
+                                    class="{{ Request::path() === 'users' ? 'nav-link active' : 'nav-link' }}">
                                     <i class="nav-icon fas fa-users"></i>
                                     <p>
                                         Usuarios
