@@ -31,6 +31,10 @@ Route::get('aboutus', function (){
     return view('aboutus',compact('team'));
 })->name('aboutus');
 
+Route::get('admin', function (){
+    return view('admin') ;
+})->name('admin');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
