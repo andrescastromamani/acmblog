@@ -200,7 +200,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="{{route('users')}}"
+                                <a href="{{route('users.index')}}"
                                     class="{{ Request::path() === 'users' ? 'nav-link active' : 'nav-link' }}">
                                     <i class="nav-icon fas fa-users"></i>
                                     <p>
