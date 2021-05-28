@@ -15,10 +15,19 @@ class UserController extends Controller
         return view('users.create');
     }
 
-    public function store(Request $request, User $user){
+    public function store(Request $request){
         $user = $request->all();
         $user['password'] = bcrypt($user['password']);
         User::create($user);
+        return redirect()->route('users.index');
+    }
+    public function edit(User $user){
+        return view('users.edit',compact('user'));
+    }
+    public function update(Request $request,User $user){
+        $usr = $request->all();
+        $usr['password'] = bcrypt($usr['password']);
+        $user->update($usr);
         return redirect()->route('users.index');
     }
 }
