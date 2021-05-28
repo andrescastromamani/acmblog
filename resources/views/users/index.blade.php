@@ -8,17 +8,22 @@
                     <th scope="col">Id</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">E-mail</th>
-                    <th scope="col">Acciones</th>
+                    <th colspan="2">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($users as $user)
                     <tr>
                         <th scope="row">{{ $user->id }}</th>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>
+                        <td scope="row">{{ $user->name }}</td>
+                        <td scope="row">{{ $user->email }}</td>
+                        <td class="mr-2">
                             <a href="{{route('users.edit',$user)}}" class="btn btn-warning">Editar</a>
+                            <form action="{{route('users.destroy',$user)}}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
