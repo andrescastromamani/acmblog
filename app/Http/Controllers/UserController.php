@@ -16,7 +16,7 @@ class UserController extends Controller
         return view('users.create');
     }
 
-    public function store(Request $request){
+    public function store(UserFormRequest $request){
         $user = $request->all();
         $user['password'] = bcrypt($user['password']);
         User::create($user);
