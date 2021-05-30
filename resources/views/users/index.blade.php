@@ -18,9 +18,9 @@
                         <td scope="row">{{ $user->name }}</td>
                         <td scope="row">{{ $user->email }}</td>
                         <td class="mr-2">
-                            <a href="{{route('users.show',$user->id)}}" type="button" class="btn btn-secondary btn-sm">Ver</a>
-                            <a href="{{route('users.edit',$user->id)}}" class="btn btn-warning btn-sm">Editar</a>
                             <form action="{{route('users.destroy',$user)}}" method="post">
+                                <a href="{{route('users.show',$user->id)}}" type="button" class="btn btn-secondary btn-sm">Ver</a>
+                                <a href="{{route('users.edit',$user->id)}}" class="btn btn-warning btn-sm">Editar</a>
                                 @csrf
                                 @method('delete')
                                 <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
