@@ -18,7 +18,8 @@
                         <td scope="row">{{ $user->name }}</td>
                         <td scope="row">{{ $user->email }}</td>
                         <td class="mr-2">
-                            <a href="{{route('users.edit',$user)}}" class="btn btn-warning">Editar</a>
+                            <a href="{{route('users.show',$user->id)}}" type="button" class="btn btn-secondary btn-sm">Ver</a>
+                            <a href="{{route('users.edit',$user->id)}}" class="btn btn-warning btn-sm">Editar</a>
                             <form action="{{route('users.destroy',$user)}}" method="post">
                                 @csrf
                                 @method('delete')
