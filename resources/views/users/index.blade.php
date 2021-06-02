@@ -2,11 +2,13 @@
 @section('content')
     <div class="container">
         <h1>Lista de Usuarios <a href="{{route('users.create')}}" class="btn btn-success float-right">Agregar Usuarios</a></h1>
+        @if ($search)
         <h5>
             <div class="alert alert-primary">
                 <p class="">Los resultados para tu busqueda {{$search}} son:</p>
             </div>
         </h5>
+        @endif
         <table class="table">
             <thead>
                 <tr>
@@ -35,5 +37,6 @@
                 @endforeach
             </tbody>
         </table>
+        {{$users->links()}}
     </div>
 @endsection

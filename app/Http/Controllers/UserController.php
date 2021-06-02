@@ -14,7 +14,7 @@ class UserController extends Controller
     public function index(Request $request){
         if($request){
             $search = trim($request->get('search'));
-            $users = User::where('name','LIKE','%'.$search.'%')->orderBy('id','asc')->get();
+            $users = User::where('name','LIKE','%'.$search.'%')->orderBy('id','asc')->paginate(8);
             return view('users.index', compact('users','search'));
         }
     }
