@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class NoteController extends Controller
 {
     public function all(){
-        return "secion de todos";
+        return view('notes.all');
     }
     public function favorites() {
-        return 'seccion favoritos';
+        return view('notes.favorites');
     }
     public function archived() {
-        return 'favoritos';
+        return view('notes.archived');
     }
 }
