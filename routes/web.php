@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NoteController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +19,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('users',UserController::class)->names('users');
+
+Route::get('notas/todas',[NoteController::class,'all']);
+Route::get('notas/favoritas',[NoteController::class,'favorites']);
+Route::get('notas/archivadas',[NoteController::class,'archived']);
